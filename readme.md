@@ -22,3 +22,7 @@ This project automates the creation of engaging video reels by combining a voice
   ```plaintext
   "I have a subtitle file in .srt format. Generate a clean timeframe report showing: segment number, start time, end time, duration in seconds, visual suggestion for reels, and subtitle text. Also, suggest a visually clean and readable tabular format to present the data for use in reports or overlays."
   ```
+
+### Step 4: Gathering the video clips and place them in a folder
+
+### Step 5: Merging the audio and video files using merge.py file
