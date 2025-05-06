@@ -1,14 +1,11 @@
 import whisper
-import sys
-import io
 
-import whisper
 
 # Load model (no need to specify task/language here)
 model = whisper.load_model("base")
 
 # Transcribe and translate the audio
-result = model.transcribe("41sec.mp3", task="translate", language="en")
+result = model.transcribe("audio_file.mp3", task="translate", language="en")
 
 # Write subtitles to an .srt file
 with open("output_subtitles.srt", "w", encoding="utf-8") as f:

@@ -1,7 +1,15 @@
 import ffmpeg
+import os
 
-clips = ['MountainViewFinal.mp4', 'RiverView.mp4', 'Templeview_final.mp4', 'finalClip.mp4']
-audio = ffmpeg.input('output_badrinath1.mp3')
+video_folder = "videoclips"
+
+
+clips = sorted(
+    [os.path.join(video_folder, f) for f in os.listdir(video_folder) if f.endswith(".mp4")],
+    key=lambda x: int(os.path.splitext(os.path.basename(x))[0])
+)
+print(clips)
+audio = ffmpeg.input('audio_file.mp3')
 
 resized_streams = []
 
